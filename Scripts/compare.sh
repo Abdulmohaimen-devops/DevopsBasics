@@ -1,6 +1,6 @@
 #!/bin/bash
 
-build_sha=$(cat /opt/shaBuild/shaBuild)
+build_sha=$(cat /opt/shaBuild)
 deploy_sha=$(cat /opt/shaDeploy)
 
 if [ $build_sha = $deploy_sha ]

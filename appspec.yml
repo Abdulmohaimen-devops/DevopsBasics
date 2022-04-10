@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: ./server/target/server.jar
-    destination: /opt/server.jar
+    destination: /opt/
   - source: ./server/target/shaBuild
-    destination: /opt/shaBuild
+    destination: /opt/
 
 hooks:
   BeforeInstall:
