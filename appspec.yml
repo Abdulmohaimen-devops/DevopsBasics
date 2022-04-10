@@ -9,6 +9,6 @@ files:
 hooks:
   BeforeInstall:
     - location: /Scripts/calDeploysha.sh
-  AfterInstall:
+  AfterInstall: 
     - location: /Scripts/compare.sh
     - location: /Scripts/RunApp.sh
