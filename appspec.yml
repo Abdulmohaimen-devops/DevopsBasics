@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./server.jar
+  - source: ./server/target/server.jar
     destination: /opt/server.jar
   - source: shaBuild
     destination: /opt/shaBuild
