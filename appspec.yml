@@ -5,9 +5,15 @@ files:
     destination: /opt/server.jar
   - source: shaBuild
     destination: /opt/shaBuild
+  - source: ./calDeploysha.sh
+    destination: /opt/calDeploysha.sh
+  - source: ./RunApp.sh
+    destination: /opt/RunApp.sh
+  - source: ./compare.sh
+    destination: /opt/compare.sh
 hooks:
   BeforeInstall:
-    - location: Scripts/calDeploysha.sh
+    - location: /opt/calDeploysha.sh
   AfterInstall:
-    - location: Scripts/RunApp.sh
-    - location: Scripts/compare.sh
+    - location: /compare.sh
+    - location: /opt/compare.sh
