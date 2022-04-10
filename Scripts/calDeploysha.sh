@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sha1sum  /opt/server.jar |  awk '{ print $1 }' > /opt/shaDeploy
-sha1sum  /opt/server.jar |  awk '{ print $1 }' 
+sha1sum  ./server/target/server.jar |  awk '{ print $1 }' > ./server/target/shaDeploy
+sha1sum  ./server/target/server.jar |  awk '{ print $1 }' 
