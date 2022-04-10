@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: ./server.jar
+    destination: /opt/server.jar
+  - source: shaBuild
+    destination: /opt/shaBuild
+hooks:
+  BeforeInstall:
+    - location: Scripts/calDeploysha.sh
+  AfterInstall:
+    - location: Scripts/RunApp.sh
+    - location: Scripts/compare.sh
