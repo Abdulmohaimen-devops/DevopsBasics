@@ -13,7 +13,7 @@ files:
     destination: /opt/compare.sh
 hooks:
   BeforeInstall:
-    - location: /opt/calDeploysha.sh
+    - location: /Scripts/calDeploysha.sh
   AfterInstall:
-    - location: /compare.sh
-    - location: /opt/compare.sh
+    - location: /Scripts/compare.sh
+    - location: /Scripts/compare.sh
