@@ -3,7 +3,7 @@ os: linux
 files:
   - source: ./server/target/server.jar
     destination: /opt/server.jar
-  - source: shaBuild
+  - source: ./server/target/shaBuild
     destination: /opt/shaBuild
   - source: ./calDeploysha.sh
     destination: /opt/calDeploysha.sh
@@ -16,4 +16,4 @@ hooks:
     - location: /Scripts/calDeploysha.sh
   AfterInstall:
     - location: /Scripts/compare.sh
-    - location: /Scripts/compare.sh
+    - location: /Scripts/RunApp.sh
