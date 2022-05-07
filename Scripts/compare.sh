@@ -10,6 +10,6 @@ if [ $build_sha = $deploy_sha ]
 then
     echo Deployment successed, Go for testing
 else
-    echo Deployment failed, trigger build again
-    aws codepipeline 
+    echo Deployment failed, trigger Pipeline again
+    aws codepipeline start-pipeline-execution --name sha
 fi
