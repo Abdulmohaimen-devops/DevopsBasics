@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sha1sum  /opt/server.jar |  awk '{ print $1 }' > /opt/shaDeploy
+sha1sum  /opt/server.jar |  awk '{ print $1 }' 
+
 build_sha=$(cat /opt/shaBuild)
 deploy_sha=$(cat /opt/shaDeploy)
 
@@ -8,5 +11,5 @@ then
     echo Deployment successed, Go for testing
 else
     echo Deployment failed, trigger build again
-    aws codebuild start-build --project-name sha_project
+    aws codepipeline 
 fi

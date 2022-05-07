@@ -15,6 +15,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - sha1sum  server/target/server.jar |  awk '{ print $1 }' > server/target/shaBuild
+      - sha1sum  server/target/server.jar |  awk '{ print $1 }'
 artifacts:
   files:
     - server/target/server.jar
