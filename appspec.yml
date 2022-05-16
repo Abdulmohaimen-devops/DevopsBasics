@@ -10,7 +10,7 @@ hooks:
     - location: scripts/stop_application
       timeout: 300
   BeforeInstall:
-    - location: /Scripts/compare.sh
+    - location: scripts/compare.sh
       timeout: 300
   ApplicationStart:
     - location: scripts/start_application
