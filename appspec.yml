@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: ./target/SampleMavenTomcatApp.war
+  - source: /target/SampleMavenTomcatApp.war
     destination: /opt/
-  - source: ./target/shaBuild
+  - source: /target/shaBuild
     destination: /opt/
 hooks:
   ApplicationStop:
