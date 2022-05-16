@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /target/SampleMavenTomcatApp.war
     destination: /opt/
-  - source: /server/target/shaBuild
+  - source: /target/shaBuild
     destination: /opt/
 hooks:
   ApplicationStop:
