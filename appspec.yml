@@ -1,13 +1,20 @@
 version: 0.0
 os: linux
 files:
-  - source: ./server/target/server.jar
-    destination: /opt/
-  - source: ./server/target/shaBuild
-    destination: /opt/
-
+  - source: /target/SampleMavenTomcatApp.war
+    destination: /tmp/codedeploy-deployment-staging-area/
+  - source: /scripts/configure_http_port.xsl
+    destination: /tmp/codedeploy-deployment-staging-area/
 hooks:
+  ApplicationStop:
+    - location: scripts/stop_application
+      timeout: 300
   BeforeInstall:
-    - location: /Scripts/compare.sh
-  AfterInstall: 
-    - location: /Scripts/RunApp.sh
+    - location: scripts/install_dependencies
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/write_codedeploy_config.sh
+    - location: scripts/start_application
+      timeout: 300
+  ValidateService:
+    - location: scripts/basic_health_check.sh
