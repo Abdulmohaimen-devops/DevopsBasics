@@ -1,13 +1,11 @@
 #!/bin/bash
 
-# cp target/SampleMavenTomcatApp.war /opt/SampleMavenTomcatApp.war
-# cp target/shaBuild /opt/shaBuild
+# incase of failure
+sha1sum   /etc/host.conf |  awk '{ print $1 }' > /opt/shaDeploy
+# 
 
-date
-ls -la deployment-root/
+# sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
 
-sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
-sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }'
 
 build_sha=$(cat /opt/shaBuild)
 deploy_sha=$(cat /opt/shaDeploy)
@@ -17,5 +15,6 @@ then
     echo Deployment successed, Go for testing
 else
     echo Deployment failed, trigger Pipeline again
-    aws codepipeline start-pipeline-execution --name sha
+    apt install awscli
+    aws codepipeline start-pipeline-execution --name sha --region eu-west-1
 fi

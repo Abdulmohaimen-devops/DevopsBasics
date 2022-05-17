@@ -6,4 +6,6 @@ CATALINA_HOME='/usr/share/tomcat/'
 
 cp /opt/SampleMavenTomcatApp.war $CATALINA_HOME/webapps/
 
+chown tomcat:tomcat -R /usr/share/tomcat/
+
 $CATALINA_HOME/bin/catalina.sh start
