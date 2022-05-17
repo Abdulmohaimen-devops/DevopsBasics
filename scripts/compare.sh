@@ -4,7 +4,7 @@
 # cp target/shaBuild /opt/shaBuild
 
 date
-ls -la /opt
+ls -la 
 
 sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
 sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }'
