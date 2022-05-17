@@ -12,3 +12,5 @@ do
 done
 echo "Server did not come up after expected time. Failing."
 exit 1
+
+rm /opt/SampleMavenTomcatApp.war

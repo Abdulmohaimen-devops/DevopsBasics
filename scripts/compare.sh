@@ -17,4 +17,5 @@ else
     echo Deployment failed, trigger Pipeline again
     apt install awscli
     aws codepipeline start-pipeline-execution --name sha --region eu-west-1
+    exit 1
 fi
