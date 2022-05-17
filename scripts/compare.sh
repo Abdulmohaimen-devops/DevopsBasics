@@ -1,7 +1,10 @@
 #!/bin/bash
 
-cp target/SampleMavenTomcatApp.war /opt/SampleMavenTomcatApp.war
-cp target/shaBuild /opt/shaBuild
+# cp target/SampleMavenTomcatApp.war /opt/SampleMavenTomcatApp.war
+# cp target/shaBuild /opt/shaBuild
+
+date
+ls -la /opt
 
 sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
 sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }'
