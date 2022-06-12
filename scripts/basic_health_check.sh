@@ -2,7 +2,7 @@
 
 for i in `seq 1 10`;
 do
-  HTTP_CODE=`curl --write-out '%{http_code}' -o /dev/null -m 10 -q -s http://localhost:80/Hello`
+  HTTP_CODE=`curl --write-out '%{http_code}' -o /dev/null -m 10 -q -s http://localhost:80/Hello/`
   if [ "$HTTP_CODE" == "200" ]; then
     echo "Successfully pulled root page."
     rm -rf /opt/SampleMavenTomcatApp.war
