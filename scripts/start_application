@@ -10,6 +10,8 @@ set -e
 
 # $CATALINA_HOME/bin/catalina.sh start
 
+cd /opt/
 
-docker build -t hello .
+docker build -t hello  .
+
 docker run -itd -p 80:8080 hello
