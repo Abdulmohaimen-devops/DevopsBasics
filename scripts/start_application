@@ -2,10 +2,14 @@
 
 set -e
 
-CATALINA_HOME='/usr/share/tomcat/'
+# CATALINA_HOME='/usr/share/tomcat/'
 
-cp /opt/SampleMavenTomcatApp.war $CATALINA_HOME/webapps/
+# cp /opt/SampleMavenTomcatApp.war $CATALINA_HOME/webapps/
 
-chown tomcat:tomcat -R /usr/share/tomcat/
+# chown tomcat:tomcat -R /usr/share/tomcat/
 
-$CATALINA_HOME/bin/catalina.sh start
+# $CATALINA_HOME/bin/catalina.sh start
+
+
+docker build -t hello .
+docker run -itd -p 80:8080 hello
