@@ -8,6 +8,7 @@ do
     rm -rf /opt/SampleMavenTomcatApp.war
     rm -rf /opt/shaBuild
     rm -rf /opt/shaDeploy
+    rm -rf /opt/Dockerfile
     exit 0;
   fi
   echo "Attempt to curl endpoint returned HTTP Code $HTTP_CODE. Backing off and retrying."
