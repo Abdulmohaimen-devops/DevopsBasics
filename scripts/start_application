@@ -10,6 +10,8 @@ set -e
 
 # $CATALINA_HOME/bin/catalina.sh start
 
+docker kill $(docker ps -q)
+
 cd /opt/
 
 docker build -t hello  .
