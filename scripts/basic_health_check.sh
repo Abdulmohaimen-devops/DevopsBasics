@@ -9,6 +9,7 @@ do
     rm -rf /opt/shaBuild
     rm -rf /opt/shaDeploy
     rm -rf /opt/Dockerfile
+    rm -rf /opt/Hello.war
     exit 0;
   fi
   echo "Attempt to curl endpoint returned HTTP Code $HTTP_CODE. Backing off and retrying."
