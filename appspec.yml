@@ -5,6 +5,8 @@ files:
     destination: /opt/
   - source: target/shaBuild
     destination: /opt/
+  - source: Dockerfile
+    destination: /opt/
 hooks:
   # ApplicationStop:
   #   - location: scripts/stop_application
