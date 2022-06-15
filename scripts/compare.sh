@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #### Incase of failure #### 
-# sha1sum   /etc/host.conf |  awk '{ print $1 }' > /opt/shaDeploy
+sha1sum   /etc/host.conf |  awk '{ print $1 }' > /opt/shaDeploy
 
-sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
+# sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
 
 build_sha=$(cat /opt/shaBuild)
 deploy_sha=$(cat /opt/shaDeploy)
