@@ -13,6 +13,7 @@ then
     echo Deployment successed, Go for testing
 else
     echo Deployment failed, trigger Pipeline again
+    echo ShaValues are not identical 
     apt install awscli
     aws codepipeline start-pipeline-execution --name SHA-Pipline --region us-west-2
     exit 1
