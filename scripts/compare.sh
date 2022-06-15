@@ -5,7 +5,6 @@
 
 sha1sum   /opt/SampleMavenTomcatApp.war |  awk '{ print $1 }' > /opt/shaDeploy
 
-
 build_sha=$(cat /opt/shaBuild)
 deploy_sha=$(cat /opt/shaDeploy)
 
